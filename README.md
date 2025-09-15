@@ -6,6 +6,15 @@
 
 여러분의 팀 협업을 응원합니다. 화이팅 👏‼️
 
+# 팀 멤버
+
+- 유현욱
+- 김채희
+- 박예슬
+- 윤소라
+- 허예진
+- 강동현
+
 ## Commit Message Convention
 
 | 타입(Type)   | 설명(Description)                                                                           |
