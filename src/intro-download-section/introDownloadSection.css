@@ -1,0 +1,99 @@
+body {
+  background-color: var(--tertiary);
+  font-family: 'Pretendard', sans-serif;
+}
+
+/* 다운로드 */
+.container {
+  max-width: 75rem;
+  padding: 6.75rem;
+
+  .section-header {
+    font-size: 2.3687rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+
+  .download {
+    background-color: var(--secondary);
+    /* border-radius: 12px; */
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.07);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    padding: 2.75rem;
+    width: 34.875rem;
+    height: 12rem;
+    box-sizing: border-box;
+
+    &:hover {
+      background: var(--tertiary);
+    }
+
+    p {
+      width: 14.625rem;
+      margin: 0 1rem;
+      font-size: 1.3313rem;
+      color: var(--contentPrimary);
+      text-align: left;
+    }
+
+    .icon {
+      svg {
+        width: 3.5rem;
+        height: 3.5rem;
+        stroke: var(--primary);
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+
+/* 소개 */
+.contents {
+  display: flex;
+  flex-flow: row nowrap;
+  flex-direction: column;
+  align-items: flex-start; /* 좌측 정렬 */
+  gap: 0.5rem;
+  width: 10rem; /* 필요에 따라 조절 */
+  font-family: 'Pretendard', sans-serif;
+  font-size: 0.875rem;
+
+  > div {
+    svg {
+      width: 1rem;
+      height: 1.25rem;
+      display: block;
+    }
+  }
+
+  header {
+    font-weight: 700;
+    font-size: 1.3313rem;
+    color: var(--primary);
+  }
+
+  p {
+    font-size: 1rem;
+    color: var(--contentPrimary);
+    line-height: 1.4;
+    white-space: nowrap;
+    white-space: nowrap;
+    overflow: visible;
+  }
+
+  a {
+    margin-top: 0.25rem;
+    font-size: 1rem;
+    color: var(--contentPrimary);
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--primary);
+    }
+  }
+}
