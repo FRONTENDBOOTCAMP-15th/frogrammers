@@ -1,0 +1,14 @@
+@import url('/src/style.css');
+
+footer {
+  background: var(--primary);
+  padding-inline: 1.5rem;
+}
+
+.footer-logo {
+  img {
+    inline-size: 2.4375rem;
+    block-size: 2.4375rem;
+    margin-top: 2.5rem;
+  }
+}
