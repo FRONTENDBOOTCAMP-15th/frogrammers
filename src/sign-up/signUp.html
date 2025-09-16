@@ -15,27 +15,29 @@
         </div>
 
         <div class="right">
-          <h2>기사로 가입하기</h2>
-          <a href="#" class="detail-link">자세히보기</a>
+          <div class="form-header">
+            <h2>기사로 가입하기</h2>
+            <a href="#" class="detail-link">자세히보기</a>
+          </div>
 
           <form class="signup-form">
             <div class="form-row">
               <label for="firstName" class="sr-only">이름</label>
-              <input type="text" id="firstName" placeholder="이름" />
+              <input type="search" id="firstName" placeholder="이름" required />
 
               <label for="lastName" class="sr-only">성</label>
-              <input type="text" id="lastName" placeholder="성" />
+              <input type="search" id="lastName" placeholder="성" required />
             </div>
 
             <label for="email" class="sr-only">이메일</label>
-            <input type="email" id="email" placeholder="이메일" />
+            <input type="email" id="email" placeholder="이메일" required />
 
             <label for="password" class="sr-only">비밀번호</label>
-            <input type="password" id="password" placeholder="비밀번호" aria-describedby="password-error" />
-            <p id="password-error" class="error-msg">비밀번호를 다시 입력해주세요.</p>
+            <input type="password" id="password" placeholder="비밀번호" aria-describedby="password-error" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" />
+            <p id="password-error" class="error-msg">비밀번호는 최소 8자리, 숫자와 영문자를 포함해야 합니다.</p>
 
             <label for="phone" class="sr-only">전화번호</label>
-            <input type="tel" id="phone" placeholder="전화번호" />
+            <input type="tel" id="phone" placeholder="전화번호" required/>
 
             <label for="country" class="sr-only">국가 선택</label>
             <select name="country" required>

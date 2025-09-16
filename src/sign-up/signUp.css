@@ -8,11 +8,20 @@
   padding: 64px;
   margin: 0 auto;
   gap: 2rem;
+  max-width: 1280px;
 }
 
 .wrapper {
   display: flex;
   justify-content: center;
+}
+
+a {
+  color: var(--contentPrimary);
+  text-decoration: underline;
+  text-decoration-color: var(--contentTertiary);
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
 }
 
 .left {
@@ -22,7 +31,8 @@
   align-items: center;
 
   h1 {
-    font-size: 50px;
+    font-size: 50.5px;
+    font-weight: 600;
   }
 }
 
@@ -31,30 +41,69 @@
   align-items: center;
   width: 582px;
 
+  .form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
   h2 {
-    font-size: 21px;
+    display: inline-block;
+    font-size: 21.3px;
   }
 
   .detail-link {
     font-size: 1rem;
   }
 
-  input,
+  .signup-form {
+    .form-row {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .form-row input {
+      flex: 1;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 12px;
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+      margin-top: 1rem;
+    }
+  }
+  
   select {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    margin-top: 1rem;
+    appearance: none;
   }
 
-  .form-row {
-    display: flex;
-    gap: 1rem;
+  /* 기본 에러 메시지 숨김 */
+  .error-msg {
+    color: var(--negative);
+    display: none;
+    font-size: 12px;
+    margin-top: 4px;
   }
 
-  .form-row input {
-    flex: 1;
-    min-width: 0;
+  /* 값이 입력되었고, invalid일 때만 에러 메시지 표시 */
+  input:invalid:not(:placeholder-shown) + .error-msg {
+    display: block;
+  }
+
+  /* valid 상태일 때 입력 박스 색상 */
+  input:valid {
+    border-color: var(--positive);
+    background-color: var(--positiveTransparent);
+  }
+
+  /* invalid 상태일 때 입력 박스 색상 (값이 있을 때만) */
+  input:invalid:not(:placeholder-shown) {
+    border-color: var(--negative);
+    background-color: var(--negativeTransparent);
   }
 
   p {
@@ -63,6 +112,7 @@
 
   .terms {
     margin: 36px 0;
+    line-height: 1.6;
   }
 
   .submit-btn {
@@ -70,5 +120,44 @@
     background: var(--primary);
     border: 0 none;
     color: var(--secondary);
+    margin-right: 36px;
+  }
+
+  .login-link {
+    display: inline;
+
+    a {
+      margin-left: 1rem;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .left {
+    display: none;
+  }
+
+  .right {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .container {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 500px) {
+  .left {
+    display: none;
+  }
+
+  .right {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .container {
+    padding: 24px;
   }
 }
