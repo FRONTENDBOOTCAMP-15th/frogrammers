@@ -2,12 +2,18 @@
 @import '../style/reset.css';
 @import '../style/base.css';
 
+footer {
+  background: var(--primary);
+}
+
 .wrapper {
   background: var(--primary);
   padding-inline: 1.5rem;
   font-family: var(--base-font-family);
   color: var(--secondary);
   min-width: 31.25rem;
+  max-width: 80rem;
+  margin: 0 auto;
 }
 .footer-brand {
   .footer-logo img {
@@ -29,7 +35,7 @@
 }
 
 .link {
-  gird .sns-list {
+  .sns-list {
     margin-top: 4rem;
   }
 
@@ -197,6 +203,7 @@ address {
   .address-bottom {
     display: grid;
     grid-auto-flow: column;
+    grid-auto-columns: max-content;
 
     gap: 1.9375rem;
   }
@@ -214,23 +221,10 @@ address {
   }
 }
 
-/* @media (min-width: 850px) {
-  footer {
-    display: grid;
-    grid-template-rows: repeat(5, 1fr);
-  }
-
-  .sns-settings {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-} */
-
 @media (min-width: 850px) {
   .wrapper {
     display: grid;
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: repeat(4, auto);
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -244,9 +238,12 @@ address {
 
   .link {
     grid-column: 1 / -1;
+  }
+  .sns-settings {
+    grid-column: 1 / -1;
     grid-row: 3 / 4;
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: auto 1fr 1fr auto;
     align-items: center;
   }
 
@@ -262,17 +259,19 @@ address {
     margin: 0;
     padding: 0;
     align-self: center;
+    width: 100%;
   }
 
   /* 오른쪽 영역 */
   .settings {
-    grid-column: 2 / 3;
+    grid-column: 4 / 5;
     justify-self: end;
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     column-gap: 3.75rem;
     align-items: center;
+    width: 100%;
   }
 
   .store-list {
@@ -287,62 +286,53 @@ address {
 }
 
 @media (min-width: 1680px) {
-  .wrapper {
+  /* .wrapper {
     display: grid;
-    grid-template-rows: repeat(5, auto);
-  }
-
-  .footer-brand {
-    grid-row: 1 / 2;
-  }
-
-  .business-list {
-    grid-row: 2 / 3;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    column-gap: 4.75rem;
-    row-gap: 0;
-  }
-
-  /* .link .sns-settings {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 3.75rem;
-  }
-
-  .link .sns-list {
-    display: flex;
-    justify-content: flex-start;
-    gap: 5.875rem;
-    padding-left: 0;
-    list-style: none;
-  }
-
-  .link .settings {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 3.75rem;
+    grid-template-rows: repeat(4, auto);
   } */
 
+  .wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* 좌 / 가운데 / 우 */
+    grid-template-rows: auto auto auto auto; /* 섹션별 행 */
+  }
+
   .link {
-    display: flex;
-    /* flex-direction: row; */
+    grid-column: 1 / -1; /* wrapper 전체 폭 차지 */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 좌 / 가운데 / 우 */
+    align-items: center; /* 세로 정렬 */
+    padding: 2rem 0; /* 위아래 여백은 필요에 맞게 */
+  }
+
+  /* 왼쪽 SNS */
+  .sns-list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    column-gap: 2rem; /* 아이콘 간격 */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-self: start;
+  }
+
+  /* 가운데 Settings */
+  .settings {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    column-gap: 2rem; /* 버튼 사이 간격 */
+    justify-self: center;
     align-items: center;
   }
 
-  .link > :nth-child(1) {
-    margin-right: 7.5625rem; /* 기본 간격 */
-  }
-
-  .link > :nth-child(2) {
-    margin-right: 21.1438rem; /* 특정 요소만 더 크게 */
-  }
-
-  address {
-    grid-column: 1 / -1;
-    grid-row: 4;
+  /* 오른쪽 스토어 */
+  .store-list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    column-gap: 1rem; /* 앱스토어 간격 */
+    justify-self: end;
   }
 }
