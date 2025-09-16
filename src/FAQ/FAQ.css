@@ -1,6 +1,6 @@
-@import '../style.css';
-@import '../style/reset.css';
-@import '../style/base.css';
+@import './../style.css';
+@import './../style/reset.css';
+@import './../style/base.css';
 
 body,
 h2,
