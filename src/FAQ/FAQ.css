@@ -13,8 +13,8 @@ a {
 
 .FAQ-detail {
   font-size: 1rem;
-  padding: 4rem;
-
+  padding: 64px;
+  margin: 0 auto;
   * {
     box-sizing: border-box;
   }
@@ -89,5 +89,23 @@ a {
     height: 0.0625rem;
     border: none;
     background-color: var(--contentTertiary);
+  }
+}
+
+@media (min-width: 1280px) {
+  .FAQ-detail {
+    max-width: 1152px;
+  }
+}
+
+@media (max-width: 850px) {
+  .FAQ-detail {
+    padding: 56px 32px;
+  }
+}
+
+@media (max-width: 500px) {
+  .FAQ-detail {
+    padding: 40px 24px;
   }
 }
