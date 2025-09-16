@@ -192,7 +192,6 @@ address {
   .address-bottom {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: max-content;
 
     gap: 1.9375rem;
   }
