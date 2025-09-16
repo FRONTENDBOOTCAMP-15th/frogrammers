@@ -14,8 +14,8 @@
 
   --borderTransparent: #898989;
   --borderOpaque: #898989;
-  --positiveTransparent: #39dd00;
-  --negativeTransparent: #ff0000;
+  --positiveTransparent: rgba(4, 136, 72, 0.1);
+  --negativeTransparent: rgba(225, 25, 0, 0.1);
 
   /* font */
   --base-font-family: 'Pretendard Variable', sans-serif;
