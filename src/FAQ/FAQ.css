@@ -13,7 +13,7 @@ a {
 
 .FAQ-detail {
   font-size: 1rem;
-  padding: 64px;
+  padding: 4rem;
   margin: 0 auto;
   * {
     box-sizing: border-box;
@@ -94,18 +94,18 @@ a {
 
 @media (min-width: 1280px) {
   .FAQ-detail {
-    max-width: 1152px;
+    max-width: 72rem;
   }
 }
 
 @media (max-width: 850px) {
   .FAQ-detail {
-    padding: 56px 32px;
+    padding: 3.5rem 2rem;
   }
 }
 
 @media (max-width: 500px) {
   .FAQ-detail {
-    padding: 40px 24px;
+    padding: 2.5rem 1.5rem;
   }
 }
