@@ -22,6 +22,10 @@ a {
   text-decoration-color: var(--contentTertiary);
   text-underline-offset: 6px;
   text-decoration-thickness: 2px;
+
+  &:hover {
+    text-decoration-color: var(--borderOpaque);
+  }
 }
 
 .left {
@@ -31,7 +35,7 @@ a {
   align-items: center;
 
   h1 {
-    font-size: 50.5px;
+    font-size: 3.1563rem;
     font-weight: 600;
   }
 }
@@ -50,7 +54,8 @@ a {
 
   h2 {
     display: inline-block;
-    font-size: 21.3px;
+    font-size: 1.3313rem;
+    font-weight: 500;
   }
 
   .detail-link {
@@ -74,9 +79,10 @@ a {
       box-sizing: border-box;
       border: 1px solid #ddd;
       margin-top: 1rem;
+      background-color: var(--tertiary);
     }
   }
-  
+
   select {
     appearance: none;
   }
@@ -85,7 +91,7 @@ a {
   .error-msg {
     color: var(--negative);
     display: none;
-    font-size: 12px;
+    font-size: 0.75rem;
     margin-top: 4px;
   }
 
@@ -107,7 +113,7 @@ a {
   }
 
   p {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 
   .terms {
@@ -121,6 +127,10 @@ a {
     border: 0 none;
     color: var(--secondary);
     margin-right: 36px;
+
+    &:hover {
+      opacity: 0.9;
+    }
   }
 
   .login-link {
@@ -133,8 +143,18 @@ a {
 }
 
 @media (max-width: 850px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
   .left {
-    display: none;
+    display: block;
+    margin-bottom: 1rem;
+
+    h1 {
+      font-size: 1.775rem;
+      margin-bottom: 20px;
+    }
   }
 
   .right {
@@ -148,8 +168,18 @@ a {
 }
 
 @media (max-width: 500px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
   .left {
-    display: none;
+    display: block;
+    margin-bottom: 1rem;
+
+    h1 {
+      font-size: 1.775rem;
+      margin-bottom: 20px;
+    }
   }
 
   .right {
