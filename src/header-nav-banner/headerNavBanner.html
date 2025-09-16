@@ -4,24 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>헤더,네브,배너</title>
-    <!-- <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
-    <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" /> -->
+    <link rel="stylesheet" href="./headerNavBanner.css" />
     <link rel="preload" as="font" href="/font/woff2/PretendardVariable.woff2" crossorigin="anonymous" />
     <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
-    <link rel="stylesheet" href="./../src/style/reset.css" />
-    <link rel="stylesheet" href="./../style/base.css" />
-    <link rel="stylesheet" href="./../style.css" />
-    <link rel="stylesheet" href="./headerNavBanner.css" />
     <script type="module" src="/src/main.js"></script>
   </head>
   <body>
     <h1 class="sr-only">헤더,네브,배너</h1>
 
     <!-- Header 영역 -->
-    <header>
+    <header class="nav-header">
       <div class="header-wrapper">
         <!-- 로고 svg -->
-        <a href="/" class="logo" title="홈으로 이동">
+        <a href="/" class="header-logo" title="홈으로 이동">
           <svg aria-label="UT" width="39" height="39" viewBox="0 0 39 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M31.7203 14.1218H26.52V29.9667H31.7203V14.1218Z" fill="url(#paint0_linear_76873_1028)" />
             <path d="M39 9.52222H19.2402V14.1227H39V9.52222Z" fill="url(#paint1_linear_76873_1028)" />
@@ -45,7 +40,7 @@
             </defs>
           </svg>
         </a>
-  
+
         <!-- Nav 영역 -->
         <nav>
           <ul class="menu-wrapper">
@@ -66,23 +61,23 @@
             </li>
           </ul>
         </nav>
-  
+
         <!-- 언어 변경 -->
-        <div class="language">
+        <div class="nav-language">
           <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M19.5 6L18.0333 7.1C17.6871 7.35964 17.2661 7.5 16.8333 7.5H13.475C12.8775 7.5 12.3312 7.83761 12.064 8.37206V8.37206C11.7342 9.03161 11.9053 9.83161 12.476 10.2986L14.476 11.9349C16.0499 13.2227 16.8644 15.22 16.6399 17.2412L16.6199 17.4206C16.5403 18.1369 16.3643 18.8392 16.0967 19.5083L15.5 21" stroke="white" />
             <path d="M2.5 10.5L5.7381 9.96032C7.09174 9.73471 8.26529 10.9083 8.03968 12.2619L7.90517 13.069C7.66434 14.514 8.3941 15.9471 9.70437 16.6022V16.6022C10.7535 17.1268 11.2976 18.3097 11.0131 19.4476L10.5 21.5" stroke="white" />
             <circle cx="12" cy="12" r="9.5" stroke="white" />
           </svg>
-  
-          <select name="language" id="language" aria-label="언어">
+
+          <select name="language" id="language" class="lang-select" aria-label="언어">
             <option value="KO-KR">KO-KR</option>
             <option value="EN">EN</option>
           </select>
         </div>
         <!-- 가입 버튼 -->
         <a class="header-signup-btn" href="/">가입하기</a>
-  
+
         <!-- 햄버거 메뉴 -->
         <button class="hamburger-menu" aria-label="메뉴 열기">
           <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -90,15 +85,21 @@
             <path d="M18 14L6 14" stroke="white" stroke-width="2" stroke-linecap="round" />
           </svg>
         </button>
-      </header>
       </div>
+    </header>
 
     <!-- 메인 섹션 배너 영역 -->
     <section class="banner-section">
-      <h1 class="sr-only">UT 배너</h1>
-      <p>우리들의 택시, UT</p>
-      <p>UT로 안전하고 편안한 차량 서비스를 이용하세요.</p>
-      <a href="/" target="_blank" rel="noopener noreferrer">앱 다운로드</a>
+      <article class="banner-article">
+        <h2>우리들의 택시, UT</h2>
+        <p>UT로 안전하고 편안한 차량 서비스를 이용하세요.</p>
+        <div class="banner-app-download">
+          <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.29289 9.70711L11.2929 14.7071L12 15.4142L12.7071 14.7071L17.7071 9.70711L16.2929 8.29289L13 11.5858V4H18C19.1046 4 20 4.89543 20 6V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V6C4 4.89543 4.89543 4 6 4H11L11 11.5858L7.70711 8.29289L6.29289 9.70711Z" fill="white" />
+          </svg>
+          <a href="/" target="_blank" rel="noopener noreferrer">앱 다운로드</a>
+        </div>
+      </article>
       <div class="background-image"></div>
     </section>
   </body>
