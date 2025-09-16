@@ -2,80 +2,104 @@
 <html lang="ko-KR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
-    <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
-    <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
-    <link rel="preload" as="font" href="/public/font/suit/SUIT-Variable.woff2" />
-    <link rel="stylesheet" href="/public/font/suit/SUIT-Variable.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>프로젝트 - CSS</title>
+    <link rel="icon" href="/vite.svg" />
+    <link rel="preload" as="font" href="/font/woff2/PretendardVariable.woff2" crossorigin="anonymous" />
+    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
     <link rel="stylesheet" href="/src/common/index.css" />
+    <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="/src/footer/footer.css" />
+    <script type="module" src="/src/main.js"></script>
   </head>
   <body>
     <h2 class="sr-only">footer</h2>
     <footer>
-      <div class="footer-brand">
-        <!-- 로고 영역 -->
-        <div class="footer-logo">
-          <a href="/" aria-label="메인페이지로 이동">
-            <img src="../assets/logo.svg" alt="" />
-          </a>
+      <div class="wrapper">
+        <div class="footer-brand">
+          <!-- 로고 영역 -->
+          <div class="footer-logo">
+            <a href="/" aria-label="메인페이지로 이동">
+              <img src="../assets/logo.svg" alt="" />
+            </a>
+          </div>
+          <!-- 서포트 영역 -->
+          <div class="support">
+            <a href="/">고객지원 센터로 가기</a>
+          </div>
         </div>
-        <!-- 서포트 영역 -->
-        <div class="support">
-          <a href="/">고객지원 센터로 가기</a>
+        <!-- 비즈니스 리스트 영역 -->
+        <div class="business-list">
+          <ul class="info-list">
+            <li><p>기업 정보</p></li>
+            <li><a href="/">회사 소개</a></li>
+            <li><a href="/">뉴스룸</a></li>
+            <li><a href="/">블로그</a></li>
+            <li><a href="/">비즈니스 정보</a></li>
+          </ul>
+          <ul class="item-list">
+            <li><p>상품</p></li>
+            <li><a href="/">차량 서비스</a></li>
+            <li><a href="/">운행</a></li>
+          </ul>
+          <ul class="citizenship-list">
+            <li><p>글로벌 시민 의식</p></li>
+            <li><a href="/">안전</a></li>
+          </ul>
         </div>
+        <div class="link">
+          <!-- SNS 리스트 영역 -->
+          <div class="sns-settings">
+            <ul class="sns-list">
+              <li class="facebook">
+                <a href="https://www.facebook.com" target="_blank"><img src="../assets/Facebook.svg" alt="페이스북" /></a>
+              </li>
+              <li class="youtube">
+                <a href="https://www.youtube.com" target="_blank"><img src="../assets/Youtube.svg" alt="유튜브" /></a>
+              </li>
+              <li class="instagram">
+                <a href="https://www.instagram.com" target="_blank"><img src="../assets/Instagram.svg" alt="인스타그램" /></a>
+              </li>
+            </ul>
+            <!-- 언어, 지도 세팅 영역 -->
+            <div class="settings">
+              <div class="lang-select">
+                <button type="button" aria-haspupup="listbox" aria-expanded="false"><img src="../assets/World.svg" alt="" aria-hidden="true" /><span>한국어</span></button>
+
+                <select name="language" id="language">
+                  <option value="ko">한국어</option>
+                  <option value="en">English</option>
+                </select>
+              </div>
+
+              <div class="region-select">
+                <button type="button" aria-haspopup="listbox" aria-expanded="false"><img src="../assets/Pin.svg" alt="" aria-hidden="true" /><span>서울</span></button>
+
+                <select name="region" id="region">
+                  <option value="seoul">서울</option>
+                  <option value="Washington D.C">Washington D.C</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <!-- 스토어 이동 영역 -->
+          <div class="store-list">
+            <a href="https://play.google.com" target="_blank" class="google-store"><img src="../assets/AppName=googlePlay.svg" alt="구글플레이스토어" /></a>
+            <a href="https://www.apple.com" target="_blank" class="app-store"><img src="../assets/AppName=appStore.svg" alt="앱스토어" /></a>
+          </div>
+        </div>
+        <!-- 주소 영역 -->
+        <address>
+          <div class="address-top">
+            <span class="copyright">&copy; 2022 UT LLC</span>
+            <span class="company-info">법인명: UT LLC | 사업자 등록 번호: 166-86-02049 | 회사 대표번호: 080-800-5555 | 대표: White Thomas Darcy | 회사 주소: 서울특별시 중구 삼일대로 343 | 통신판매번호: 2021-서울중구-0976</span>
+          </div>
+          <div class="address-bottom">
+            <a href="/">개인정보 보호</a>
+            <a href="/">약관</a>
+          </div>
+        </address>
       </div>
-      <!-- 비즈니스 리스트 영역 -->
-      <div class="business-list">
-        <h3>기업 정보</h3>
-        <ul class="info-list">
-          <li><a href="/">회사 소개</a></li>
-          <li><a href="/">뉴스룸</a></li>
-          <li><a href="/">블로그</a></li>
-          <li><a href="/">비즈니스 정보</a></li>
-        </ul>
-        <h3>상품</h3>
-        <ul class="item-list">
-          <li><a href="/">차량 서비스</a></li>
-          <li><a href="/">운행</a></li>
-        </ul>
-        <h3>글로벌 시민 의식</h3>
-        <ul class="citizenship-list">
-          <li><a href="/">안전</a></li>
-        </ul>
-      </div>
-      <div class="link">
-        <!-- SNS 리스트 영역 -->
-        <ul class="sns-list">
-          <li class="facebook">
-            <a href="https://www.facebook.com" target="_blank"><img src="../assets/Facebook.svg" alt="페이스북" /></a>
-          </li>
-          <li class="youtube">
-            <a href="https://www.youtube.com" target="_blank"><img src="../assets/Youtube.svg" alt="유튜브" /></a>
-          </li>
-          <li class="instagram">
-            <a href="https://www.instagram.com" target="_blank"><img src="../assets/Instagram.svg" alt="인스타그램" /></a>
-          </li>
-        </ul>
-        <!-- 언어, 지도 세팅 영역 -->
-        <div class="settings">
-          <button type="button" class="lang"><img src="../assets/World.svg" alt="" />한국어</button>
-          <button type="button" class="pin"><img src="../assets/Pin.svg" alt="" />서울</button>
-        </div>
-        <!-- 스토어 이동 영역 -->
-        <div class="store-list">
-          <a href="https://play.google.com" target="_blank"><img src="../assets/AppName=googlePlay.svg" alt="구글플레이스토어" /></a>
-          <a href="https://www.apple.com" target="_blank"><img src="../assets/AppName=appStore.svg" alt="앱스토어" /></a>
-        </div>
-      </div>
-      <!-- 주소 영역 -->
-      <address>
-        <span>&copy; 2022 UT LLC</span>
-        <span>법인명: UT LLC | 사업자 등록 번호: 166-86-02049 | 회사 대표번호: 080-800-5555 | 대표: White Thomas Darcy | 회사 주소: 서울특별시 중구 삼일대로 343 | 통신판매번호: 2021-서울중구-0976</span>
-        <span><a href="/">개인정보 보호</a></span>
-        <span><a href="/">약관</a></span>
-      </address>
     </footer>
   </body>
 </html>
